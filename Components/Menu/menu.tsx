@@ -4,7 +4,7 @@ import { Button } from "../ui/Button/button";
 
 export default function Menu() {
   return (
-    <section className="flex flex-col bg-primary-foreground h-svh m-1 rounded-md shadow-lg w-1/5">
+    <section className="flex flex-col bg-primary-foreground m-1 rounded-md shadow-lg w-1/5 min-h-min">
 
       <div className="flex justify-center items-center gap-4 mt-8 rounded-sm m-1">
         <Avatar>
