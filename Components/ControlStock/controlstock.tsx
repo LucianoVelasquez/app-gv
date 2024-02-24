@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { Button } from "../ui/Button/button";
-import { Input } from "../ui/Inputs/input";
 import { Payment,columns } from "../ui/Table/columns";
 import { DataTable } from "./data-table";
 
@@ -8,73 +5,73 @@ async function getData(): Promise<Payment[]> {
   // Fetch data from your API here.
   return [
     {
-      id: "728ed52f",
+      id: "728eadsf",
       amount: 100,
       status: "pending",
       descripcion: "m@mariano.com",
     },
     {
-      id: "728ed52f",
+      id: "72dfgd52f",
       amount: 10525045,
       status: "pending",
       descripcion: "m@Joselo.com",
     },
     {
-      id: "728ed52f",
+      id: "h2f",
       amount: 101,
       status: "pending",
       descripcion: "m@example.com",
     },
     {
-      id: "728ed52f",
+      id: "728ew2f",
       amount: 150,
       status: "pending",
       descripcion: "m@example.com",
     },
     {
-      id: "728ed52f",
+      id: "72trf",
       amount: 70,
       status: "pending",
       descripcion: "agenda",
     },
     {
-      id: "728ed52f",
+      id: "72gff",
       amount: 860,
       status: "pending",
       descripcion: "m@example.com",
     },
     {
-      id: "489e1d42",
+      id: "4sd42",
       amount: 125,
       status: "processing",
       descripcion: "example@gmail.com",
     },
     {
-      id: "489e1d42",
+      id: "4a9e1d42",
       amount: 14,
       status: "processing",
       descripcion: "example@gmail.com",
     },
     {
-      id: "489e1d42",
+      id: "489e53",
       amount: 12,
       status: "processing",
       descripcion: "Agenda",
     },
     {
-      id: "489e1d42",
+      id: "41231d42",
       amount: 133,
       status: "processing",
       descripcion: "Musculosa",
     },
     {
-      id: "489e1d42",
+      id: "48965d42",
       amount: 44,
       status: "processing",
       descripcion: "arrandeo",
     },
     {
-      id: "489e1d42",
+      id: "44g9e",
       amount: 112,
       status: "processing",
       descripcion: "Agenda",
