@@ -2,6 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown, MoreHorizontal  } from "lucide-react"
+import { Checkbox } from "@/Components/ui/Checkbox/checkbox"
 
 import { Button } from "@/Components/ui/Button/button"
 import {
@@ -12,6 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/Components/ui/DropDownMenu/dropdown-menu"
+import { table } from "console"
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -24,6 +26,29 @@ export type Payment = {
 }
 
 export const columns: ColumnDef<Payment>[] = [
+  {
+    id: "select",
+    header: ({ table }) => (
+      <Checkbox
+        checked={
+          table.getIsAllPageRowsSelected() ||
+          (table.getIsSomePageRowsSelected() && "indeterminate")
+        }
+        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+        aria-label="Select all"
+      />
+    ),
+    cell: ({ row }) => (
+      <Checkbox
+        checked={row.getIsSelected()}
+        onCheckedChange={(value) => row.toggleSelected(!!value)}
+        onClick={()=> console.log(row.original.id)}
+        aria-label="Select row"
+      />
+    ),
+    enableSorting: false,
+    enableHiding: false,
+  },
   {
     accessorKey: "id",
     header: "Id"
@@ -87,7 +112,7 @@ export const columns: ColumnDef<Payment>[] = [
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem>Editar</DropdownMenuItem>
-              <DropdownMenuItem>Eliminar</DropdownMenuItem>
+              <DropdownMenuItem onClick={(e)=> console.log(payment.id)}>Eliminar</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>         
         </div>
