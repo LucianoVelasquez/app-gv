@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/Components/ThemeProvider/theme-provider";
+import { ProviderStore } from '@/redux/providers'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,12 @@ export default function RootLayout({
   return (
     <html  lang="en">
       <body className={inter.className}>   
+      <ProviderStore>
         <ThemeProvider attribute="class" defaultTheme="system">
-          {children}
+            {children}
         </ThemeProvider>
+      </ProviderStore>
+        
       </body>
     </html>
   );
